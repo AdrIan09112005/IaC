@@ -1,0 +1,9 @@
+---
+- name: Instalar htop en hosts EC2
+  hosts: ec2
+  become: yes
+  tasks:
+    - name: Asegurar htop instalado
+      package:
+        name: htop
+        state: present
